@@ -12,6 +12,9 @@ struct StreakApp: App {
     var body: some Scene {
         WindowGroup {
             ContentView()
+                .onAppear {
+                    NotificationManager.shared.requestPermission()
+                }
         }
     }
 }
